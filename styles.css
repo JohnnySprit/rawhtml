@@ -1,0 +1,107 @@
+body {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: absolute;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 185%;
+    height: 185%;
+    background-image: url(./images/net.jpg);
+    background-position: center;
+    background-size: contain;
+    transform: translate(-50%, -50%) rotate(90deg);
+    z-index: -1;
+    filter: grayscale(80%) brightness(0.85) contrast(120%) blur(1px);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 60px
+}
+
+p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+}
+
+#timezone * {
+    text-decoration: none;
+}
+
+.name {
+    color: rgb(255, 255, 255);
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.6),
+        -1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+img {
+    width: 480px;
+}
+
+.timeline {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.6),
+        -1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.24);
+    z-index: -1;
+}
+
+.navline {
+    position: relative;
+    display: inline-block;
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.6),
+        -1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.navline::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+}
+
+.navline a {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 4px;
+}
+
+.navline a:hover {
+    color: rgb(199, 33, 31);
+    text-decoration: underline;
+}

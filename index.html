@@ -1,49 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jnzheng</title>
+    <title>Johnny Zheng</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script type="text/javascript">
-        // time zone formatting
-        let options = {
-            timeZone: 'US/Eastern',
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric',
-        };
-        let formatter = new Intl.DateTimeFormat([], options);
-
-        // set time
-        setInterval(() => {
-            document.querySelector("#time").innerText = formatter.format(new Date());
-        }, 1000);
-    </script>
 </head>
-
 <body>
-    <p>
-        <font size="8" class="name"><i><b>JOHNNY ZHENG</b></i></font> <br><br>
-        <img src="./images/chestnut-in-bloom.jpg" alt="Chestnut tree in bloom"><br><br>
-        <span id="timezone">
-            <i class="timeline">
-                <a>TIME IN BLOOMINGTON</a> - <span id="time">00:00:00 PM</span> <a>EST</a>
-            </i>
-        </span>
-        <br><br>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="name">Johnny Zheng</div>
+            <nav>
+                <a href="pages/about.html">About</a>
+                <a href="pages/gear.html">Gear</a>
+                <a href="pages/projects.html">Projects</a>
+                <a href="pages/contact.html">Contact</a>
+            </nav>
+        </div>
 
-        <span class="navline">
-            <a href="./about.html" class="customlink">about</a> //
-            <a href="./resume.html" class="customlink">resume</a> //
-            <a href="https://www.linkedin.com/in/jnzheng/" class="customlink">linkedin</a> //
-            <a href="https://github.com/JohnnySprit" class="customlink">github</a>
-        </span>
+        <!-- Center Column -->
+        <div class="center-column">
+            <img src="./images/chestnut-in-bloom.jpg" alt="impressionism art featuring a chestnut in bloom" class="main-image">
+            <div class="localtime">
+                TIME IN BLOOMINGTON - <span id="time">00:00:00</span> EST
+            </div>
+        </div>
+    </div>
 
-        <br><br>
-    </p>
+    <script src="scripts/localtime.js"></script>
 </body>
-
 </html>

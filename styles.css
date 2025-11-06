@@ -26,8 +26,8 @@ nav a:hover {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
     gap: 40px;
-    padding-top: 240px;
-    max-width: 1200px;
+    padding-top: 160px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -40,7 +40,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -80px;
 }
 
 .main-image {
@@ -55,16 +54,15 @@ nav a:hover {
 }
 
 .localtime {
-    margin-top: 20px;
-    padding: 8px 16px;
+    margin-top: -20px;
+    margin-left: 20px;
     font-size: 14px;
     font-style: italic;
 }
 
 /* ========== PAGE LAYOUT ========== */
 .header {
-    padding: 40px 260px;
-    margin-top: 80px;
+    padding: 30px 30px;
 }
 
 .main-nav {
@@ -92,8 +90,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 60px;
-    max-width: 1400px;
-    padding-left: 260px;
+    padding-left: 20px;
 }
 
 .page-title {
@@ -126,13 +123,77 @@ nav a:hover {
 
 .wishlist {
     position: absolute;
-    right: 140px;
+    right: 280px;
     top: 94px;
 }
 
 img {
-    width: 360px;
+    width: 380px;
     position: absolute;
-    right: -340px;
-    top: -80px;
+    right: -320px;
+    top: -45px;
 }
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+@media screen and (max-width: 1280px) {
+    .container {
+        padding-top: -20px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .main-image {
+        max-width: 50%;
+        margin-top: 60px;
+        margin-right: 560px;
+    }
+
+    .localtime {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .header {
+        padding: 30px 30px;
+    }
+
+    img {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 40px;
+    }
+
+    .wishlist {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px 20px 20px;
+        gap: 0px;
+    }
+
+    .left-column {
+        text-align: center;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+}
+
